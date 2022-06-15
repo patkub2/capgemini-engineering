@@ -51,6 +51,9 @@ students.forEach((element) => {
     avg +
     "</li>" +
     "</ul></div>";
+  //if (avg > 5) {
+  //  document.getElementById(element.name).style.borderColor = "red";
+  // }
 });
 
 console.log(txt);
