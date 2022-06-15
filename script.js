@@ -32,15 +32,7 @@ const students = [
 
 let txt = "";
 students.forEach((element) => {
-  let docc = document.getElementById(element.name);
-
-  function changeStyle() {
-    docc.style.borderColor = "red";
-  }
-
-  element.marks.forEach(function (item, index) {
-    item = 5 ? changeStyle : null;
-  });
+  let avg = element.marks.reduce((a, b) => a + b, 0) / element.marks.length;
 
   txt +=
     "<div classname='card' id=" +
@@ -56,9 +48,10 @@ students.forEach((element) => {
     element.marks +
     "</li>" +
     "<li>" +
-    element.marks.reduce((a, b) => a + b, 0) / element.marks.length +
+    avg +
     "</li>" +
     "</ul></div>";
 });
+
 console.log(txt);
 document.getElementById("demo").innerHTML = txt;
