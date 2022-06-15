@@ -14,3 +14,12 @@ body {
   overflow: hidden;
   margin: 0;
 }
+li {
+  border: 1px;
+}
+div {
+  border: 1px solid black;
+}
+div:focus {
+  background-color: gray;
+}
